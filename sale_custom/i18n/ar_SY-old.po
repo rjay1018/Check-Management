@@ -1,0 +1,994 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* sale_custom
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-15 14:02+0000\n"
+"PO-Revision-Date: 2019-11-15 14:02+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sale_custom
+#: selection:sale.order,payment_type:0
+msgid " Bank"
+msgstr "شيك"
+
+#. module: sale_custom
+#: model:ir.ui.view,arch_db:sale_custom.report_saleorder_document_inh
+msgid "&amp;bull;"
+msgstr "&amp;bull;"
+
+#. module: sale_custom
+#: model:ir.ui.view,arch_db:sale_custom.report_saleorder_document_inh
+msgid "&amp;nbsp;<span>on</span>&amp;nbsp;"
+msgstr "&amp;nbsp;<span>on</span>&amp;nbsp;"
+
+#. module: sale_custom
+#: model:ir.ui.view,arch_db:sale_custom.report_saleorder_document_inh
+msgid "<span>Pro-Forma Invoice # </span>"
+msgstr "<span>Pro-Forma Invoice # </span>"
+
+#. module: sale_custom
+#: model:ir.ui.view,arch_db:sale_custom.report_saleorder_document_inh
+msgid "<strong>Date Ordered:</strong>"
+msgstr "<strong>تاريخ البيع:</strong>"
+
+#. module: sale_custom
+#: model:ir.ui.view,arch_db:sale_custom.report_saleorder_document_inh
+msgid "<strong>Expiration Date:</strong>"
+msgstr "<strong>تاريخ الإنتهاء:</strong>"
+
+#. module: sale_custom
+#: model:ir.ui.view,arch_db:sale_custom.report_saleorder_document_inh
+msgid "<strong>Fiscal Position Remark:</strong>"
+msgstr "<strong>Fiscal Position Remark:</strong>"
+
+#. module: sale_custom
+#: model:ir.ui.view,arch_db:sale_custom.report_saleorder_document_inh
+msgid "<strong>Payment Terms:</strong>"
+msgstr "<strong>شروط السـداد</strong>"
+
+#. module: sale_custom
+#: model:ir.ui.view,arch_db:sale_custom.report_saleorder_document_inh
+msgid "<strong>Quotation Date:</strong>"
+msgstr "<strong>تاريخ الفاتورة</strong>"
+
+#. module: sale_custom
+#: model:ir.ui.view,arch_db:sale_custom.report_saleorder_document_inh
+msgid "<strong>Salesperson:</strong>"
+msgstr "<strong>العميل</strong>"
+
+#. module: sale_custom
+#: model:ir.ui.view,arch_db:sale_custom.report_saleorder_document_inh
+msgid "<strong>Shipping address:</strong>"
+msgstr "<strong>عنوان الشحنـة</strong>"
+
+#. module: sale_custom
+#: model:ir.ui.view,arch_db:sale_custom.report_saleorder_document_inh
+msgid "<strong>Subtotal: </strong>"
+msgstr "<strong>المجموع</strong>"
+
+#. module: sale_custom
+#: model:ir.ui.view,arch_db:sale_custom.report_saleorder_document_inh
+msgid "<strong>Subtotal</strong>"
+msgstr "<strong>المجموع</strong>"
+
+#. module: sale_custom
+#: model:ir.ui.view,arch_db:sale_custom.report_saleorder_document_inh
+msgid "<strong>Total</strong>"
+msgstr "<strong>الإجمالي</strong>"
+
+#. module: sale_custom
+#: model:ir.ui.view,arch_db:sale_custom.report_saleorder_document_inh
+msgid "<strong>Your Reference:</strong>"
+msgstr "<strong>المرجع</strong>"
+
+#. module: sale_custom
+#: code:addons/sale_custom/models/models.py:119
+#, python-format
+msgid "Add at least one product"
+msgstr "يجب اضافة صنف واحد علي الأقل! "
+
+#. module: sale_custom
+#: model:ir.ui.view,arch_db:sale_custom.report_saleorder_document_inh
+msgid "Amount"
+msgstr "المبلغ"
+
+#. module: sale_custom
+#: model:ir.model.fields,field_description:sale_custom.field_sale_order_amount_due
+msgid "Amount Due"
+msgstr "المبلغ المتبقي"
+
+#. module: sale_custom
+#: model:ir.model.fields,field_description:sale_custom.field_sale_order_amount_paid_percent
+#: model:ir.ui.view,arch_db:sale_custom.view_order_form_inherit_sale_invoice
+msgid "Amount Paid Percent"
+msgstr "نسبة الدفع"
+
+#. module: sale_custom
+#: model:ir.model.fields,field_description:sale_custom.field_sale_order_line_lot_id
+#: model:ir.ui.view,arch_db:sale_custom.report_saleorder_document_inh
+msgid "Batch"
+msgstr "رقم الباتش"
+
+#. module: sale_custom
+#: selection:sale.order,payment_type:0
+msgid "Cash"
+msgstr "نقداً"
+
+#. module: sale_custom
+#: model:ir.model.fields,field_description:sale_custom.field_sales_loactions_create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: sale_custom
+#: model:ir.model.fields,field_description:sale_custom.field_sales_loactions_create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: sale_custom
+#: model:ir.model.fields,field_description:sale_custom.field_sale_order_customer_history_ids
+#: model:ir.ui.view,arch_db:sale_custom.sale_order_inherited_form
+msgid "Customer History"
+msgstr "معلومات العميل السابقة "
+
+#. module: sale_custom
+#: model:ir.model.fields,field_description:sale_custom.field_sales_loactions_description
+#: model:ir.ui.view,arch_db:sale_custom.report_saleorder_document_inh
+msgid "Description"
+msgstr "الوصف"
+
+#. module: sale_custom
+#: model:ir.ui.view,arch_db:sale_custom.report_saleorder_document_inh
+msgid "Disc.(%)"
+msgstr "Disc.(%)"
+
+#. module: sale_custom
+#: model:ir.model.fields,field_description:sale_custom.field_sales_loactions_display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: sale_custom
+#: model:ir.model.fields,field_description:sale_custom.field_res_partner_duration_date
+#: model:ir.model.fields,field_description:sale_custom.field_res_users_duration_date
+msgid "Duration Date (days)"
+msgstr "فترة السماحية للعميل"
+
+#. module: sale_custom
+#: model:ir.model.fields,field_description:sale_custom.field_sales_loactions_id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: sale_custom
+#: model:ir.model.fields,field_description:sale_custom.field_sale_order_invoiced_amount
+msgid "Invoiced Amount"
+msgstr "مبلغ الفاتورة"
+
+#. module: sale_custom
+#: model:ir.ui.view,arch_db:sale_custom.report_saleorder_document_inh
+msgid "Invoicing address:"
+msgstr "عنوان الفاتورة"
+
+#. module: sale_custom
+#: model:ir.ui.view,arch_db:sale_custom.report_saleorder_document_inh
+msgid "Invoicing and shipping address:"
+msgstr "Invoicing and shipping address:"
+
+#. module: sale_custom
+#: model:ir.model.fields,field_description:sale_custom.field_sales_loactions___last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: sale_custom
+#: model:ir.model.fields,field_description:sale_custom.field_sales_loactions_write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: sale_custom
+#: model:ir.model.fields,field_description:sale_custom.field_sales_loactions_write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: sale_custom
+#: model:ir.model.fields,field_description:sale_custom.field_res_users_location_id
+msgid "Location"
+msgstr "المكان"
+
+#. module: sale_custom
+#: model:ir.model.fields,field_description:sale_custom.field_sales_loactions_name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: sale_custom
+#: model:ir.ui.view,arch_db:sale_custom.report_saleorder_document_inh
+msgid "Order #"
+msgstr "الطلب"
+
+#. module: sale_custom
+#: model:ir.model.fields,field_description:sale_custom.field_sale_order_paid_amount
+msgid "Paid Amount"
+msgstr "المبلغ المدفوع"
+
+#. module: sale_custom
+#: model:ir.model.fields,field_description:sale_custom.field_sale_order_payment_type
+msgid "Payment Type"
+msgstr "طريقة الدفع"
+
+#. module: sale_custom
+#: model:ir.model.fields,field_description:sale_custom.field_sales_loactions_sales_pres
+msgid "Percentage"
+msgstr "النسبة"
+
+#. module: sale_custom
+#: model:ir.ui.view,arch_db:sale_custom.report_saleorder_document_inh
+msgid "Quantity"
+msgstr "Quantity"
+
+#. module: sale_custom
+#: model:ir.model,name:sale_custom.model_sale_order
+msgid "Quotation"
+msgstr "الفاتورة"
+
+#. module: sale_custom
+#: model:ir.ui.view,arch_db:sale_custom.report_saleorder_document_inh
+msgid "Quotation #"
+msgstr "Quotation #"
+
+#. module: sale_custom
+#: model:ir.model,name:sale_custom.model_sales_loactions
+msgid "Requirments of sales loactions"
+msgstr "Requirments of sales loactions"
+
+#. module: sale_custom
+#: model:ir.model.fields,field_description:sale_custom.field_sale_order_sales_man_id
+msgid "Sales Man"
+msgstr "مندوب المبيعات"
+
+#. module: sale_custom
+#: model:ir.model.fields,field_description:sale_custom.field_res_users_sales_men_ids
+msgid "Sales Men"
+msgstr "مندوب المبيعات"
+
+#. module: sale_custom
+#: model:ir.model,name:sale_custom.model_sale_order_line
+msgid "Sales Order Line"
+msgstr "Sales Order Line"
+
+#. module: sale_custom
+#: model:ir.model.fields,field_description:sale_custom.field_sale_order_receipt_date
+msgid "Start Date"
+msgstr "تاريخ البدء"
+
+#. module: sale_custom
+#: model:ir.ui.view,arch_db:sale_custom.report_saleorder_document_inh
+msgid "Taxes"
+msgstr "Taxes"
+
+#. module: sale_custom
+#: sql_constraint:res.partner:0
+msgid "The value of the field 'Default Validity Duration Date  of Sale Orders' must be positive or 0."
+msgstr "The value of the field 'Default Validity Duration Date  of Sale Orders' must be positive or 0."
+
+#. module: sale_custom
+#: model:ir.ui.view,arch_db:sale_custom.report_saleorder_document_inh
+msgid "Total Price"
+msgstr "Total Price"
+
+#. module: sale_custom
+#: model:ir.ui.view,arch_db:sale_custom.report_saleorder_document_inh
+msgid "Unit Price"
+msgstr "Unit Price"
+
+#. module: sale_custom
+#: model:ir.ui.view,arch_db:sale_custom.view_partner_form_inherit
+msgid "duration..."
+msgstr "الفترة"
+
+#. module: sale_custom
+#: model:ir.model,name:sale_custom.model_res_partner
+msgid "inherit res partner and add some fields"
+msgstr "inherit res partner and add some fields"
+
+#. module: sale_custom
+#: model:ir.actions.act_window,name:sale_custom.action_orders_inherit
+msgid "sale.order.action_orders"
+msgstr "sale.order.action_orders"
+
+#. module: sale_custom
+#: code:addons/sale_custom/models/models.py:139
+#, python-format
+msgid "you can not sale "
+msgstr "لا يمكن البيع لتجاوز فتره السداد للعميل "
+
+#. module: sale_custom
+#: model:ir.ui.view,arch_db:sale_custom.daily_cash_report_temp
+msgid "<b style=\"font-family:Georgia, serif;\">\n"
+"                                            Amount \n"
+"                                        </b>"
+msgstr "<b style=\"font-family:Georgia, serif;\">\n"
+"                                            المبلغ \n"
+"                                        </b>"
+
+#. module: sale_custom
+#: model:ir.ui.view,arch_db:sale_custom.daily_cash_report_temp
+msgid "<b style=\"font-family:Georgia, serif;\">\n"
+"                                            Balance \n"
+"                                        </b>"
+msgstr "<b style=\"font-family:Georgia, serif;\">\n"
+"                                            الرصيد \n"
+"                                        </b>"
+
+#. module: sale_custom
+#: model:ir.ui.view,arch_db:sale_custom.daily_cash_report_temp
+msgid "<b style=\"font-family:Georgia, serif;\">\n"
+"                                            Cash\n"
+"                                        </b>"
+msgstr "<b style=\"font-family:Georgia, serif;\">\n"
+"                                            نقد\n"
+"                                        </b>"
+
+
+#. module: sale_custom
+#: model:ir.ui.view,arch_db:sale_custom.daily_cash_report_temp
+msgid "<b style=\"font-family:Georgia, serif;\">\n"
+"                                            Check \n"
+"                                        </b>"
+msgstr "<b style=\"font-family:Georgia, serif;\">\n"
+"                                            شيك \n"
+"                                        </b>"
+
+#. module: sale_custom
+#: model:ir.ui.view,arch_db:sale_custom.daily_cash_report_temp
+msgid "<b style=\"font-family:Georgia, serif;\">\n"
+"                                            Check Number \n"
+"                                        </b>"
+msgstr "<b style=\"font-family:Georgia, serif;\">\n"
+"                                            رقم الشيك\n"
+"                                        </b>"
+
+#. module: sale_custom
+#: model:ir.ui.view,arch_db:sale_custom.daily_cash_report_temp
+msgid "<b style=\"font-family:Georgia, serif;\">\n"
+"                                            Customer \n"
+"                                        </b>"
+msgstr "<b style=\"font-family:Georgia, serif;\">\n"
+"                                            الصيدلية \n"
+"                                        </b>"
+
+#. module: sale_custom
+#: model:ir.ui.view,arch_db:sale_custom.daily_cash_report_temp
+msgid "<b style=\"font-family:Georgia, serif;\">\n"
+"                                            Date \n"
+"                                        </b>"
+msgstr "<b style=\"font-family:Georgia, serif;\">\n"
+"                                            التاريخ \n"
+"                                        </b>"
+
+#. module: sale_custom
+#: model:ir.ui.view,arch_db:sale_custom.daily_cash_report_temp
+msgid "<b style=\"font-family:Georgia, serif;\">\n"
+"                                            Entry \n"
+"                                        </b>"
+msgstr "<b style=\"font-family:Georgia, serif;\">\n"
+"                                            القيد \n"
+"                                        </b>"
+
+#. module: sale_custom
+#: model:ir.ui.view,arch_db:sale_custom.daily_cash_report_temp
+msgid "<b style=\"font-family:Georgia, serif;\">\n"
+"                                            Entry  Date \n"
+"                                        </b>"
+msgstr "<b style=\"font-family:Georgia, serif;\">\n"
+"                                            تاريخ القيد\n"
+"                                        </b>"
+
+#. module: sale_custom
+#: model:ir.ui.view,arch_db:sale_custom.daily_cash_report_temp
+msgid "<b style=\"font-family:Georgia, serif;\">\n"
+"                                            Entry Type \n"
+"                                        </b>"
+msgstr "<b style=\"font-family:Georgia, serif;\">\n"
+"                                            نوع القيد\n"
+"                                        </b>"
+
+#. module: sale_custom
+#: model:ir.ui.view,arch_db:sale_custom.daily_cash_report_temp
+msgid "<b style=\"font-family:Georgia, serif;\">\n"
+"                                            Invoice \n"
+"                                        </b>"
+msgstr "<b style=\"font-family:Georgia, serif;\">\n"
+"                                            الفاتورة \n"
+"                                        </b>"
+
+#. module: sale_custom
+#: model:ir.ui.view,arch_db:sale_custom.daily_cash_report_temp
+msgid "<b style=\"font-family:Georgia, serif;\">\n"
+"                                            Invoice Number\n"
+"                                        </b>"
+msgstr "<b style=\"font-family:Georgia, serif;\">\n"
+"                                            رقم الفاتورة\n"
+"                                        </b>"
+
+#. module: sale_custom
+#: model:ir.ui.view,arch_db:sale_custom.daily_cash_report_temp
+msgid "<b style=\"font-family:Georgia, serif;\">\n"
+"                                            Location \n"
+"                                        </b>"
+msgstr "<b style=\"font-family:Georgia, serif;\">\n"
+"                                            المكان \n"
+"                                        </b>"
+
+#. module: sale_custom
+#: model:ir.ui.view,arch_db:sale_custom.daily_cash_report_temp
+msgid "<b style=\"font-family:Georgia, serif;\">\n"
+"                                            Recipient \n"
+"                                        </b>"
+msgstr "<b style=\"font-family:Georgia, serif;\">\n"
+"                                            المستلم \n"
+"                                        </b>"
+
+#. module: sale_custom
+#: model:ir.ui.view,arch_db:sale_custom.daily_cash_report_temp
+msgid "<b style=\"font-family:Georgia, serif;\">\n"
+"                                            Sales Man \n"
+"                                        </b>"
+msgstr "<b style=\"font-family:Georgia, serif;\">\n"
+"                                            مندوب المبيعات\n"
+"                                        </b>"
+
+#. module: sale_custom
+#: model:ir.ui.view,arch_db:sale_custom.daily_cash_report_temp
+msgid "<b style=\"font-family:Georgia, serif;\">\n"
+"                                            State \n"
+"                                        </b>"
+msgstr "<b style=\"font-family:Georgia, serif;\">\n"
+"                                            الحالة \n"
+"                                        </b>"
+
+#. module: sale_custom
+#: model:ir.ui.view,arch_db:sale_custom.non_paid_checks_report_temp
+#: model:ir.ui.view,arch_db:sale_custom.paid_checks_report_temp
+msgid "<b style=\"font-family:Georgia, serif;\">\n"
+"                                            invoice\n"
+"                                        </b>"
+msgstr "<b style=\"font-family:Georgia, serif;\">\n"
+"                                            الفاتورة\n"
+"                                        </b>"
+
+#. module: sale_custom
+#: model:ir.ui.view,arch_db:sale_custom.paid_checks_report_temp
+msgid "<b style=\"font-family:Georgia, serif;\">\n"
+"                                            voucher\n"
+"                                        </b>"
+msgstr "<b style=\"font-family:Georgia, serif;\">\n"
+"                                            القيد\n"
+"                                        </b>"
+
+#. module: sale_custom
+#: model:ir.ui.view,arch_db:sale_custom.non_paid_checks_report_temp
+#: model:ir.ui.view,arch_db:sale_custom.paid_checks_report_temp
+msgid "<b style=\"font-family:Georgia, serif;\">\n"
+"                                            voucher \n"
+"                                        </b>"
+msgstr "<b style=\"font-family:Georgia, serif;\">\n"
+"                                            القيد \n"
+"                                        </b>"
+
+#. module: sale_custom
+#: model:ir.ui.view,arch_db:sale_custom.sale_man_invoices_report_temp
+msgid "<b style=\"font-family:Georgia, serif;\">\n"
+"                                        Amount\n"
+"                                    </b>"
+msgstr "<b style=\"font-family:Georgia, serif;\">\n"
+"                                        المبلغ\n"
+"                                    </b>"
+
+#. module: sale_custom
+#: model:ir.ui.view,arch_db:sale_custom.daily_sale_report_temp
+#: model:ir.ui.view,arch_db:sale_custom.non_paid_checks_report_temp
+#: model:ir.ui.view,arch_db:sale_custom.paid_checks_report_temp
+msgid "<b style=\"font-family:Georgia, serif;\">\n"
+"                                        Amount \n"
+"                                    </b>"
+msgstr "<b style=\"font-family:Georgia, serif;\">\n"
+"                                        المبلغ \n"
+"                                    </b>"
+
+
+#. module: sale_custom
+#: model:ir.ui.view,arch_db:sale_custom.sale_man_invoices_report_temp
+msgid "<b style=\"font-family:Georgia, serif;\">\n"
+"                                        Balance \n"
+"                                    </b>"
+msgstr "<b style=\"font-family:Georgia, serif;\">\n"
+"                                        الرصيد \n"
+"                                    </b>"
+
+#. module: sale_custom
+#: model:ir.ui.view,arch_db:sale_custom.sale_man_invoices_report_temp
+msgid "<b style=\"font-family:Georgia, serif;\">\n"
+"                                        Cash\n"
+"                                    </b>"
+msgstr "<b style=\"font-family:Georgia, serif;\">\n"
+"                                        نقدا\n"
+"                                    </b>"
+
+#. module: sale_custom
+#: model:ir.ui.view,arch_db:sale_custom.sale_man_invoices_report_temp
+msgid "<b style=\"font-family:Georgia, serif;\">\n"
+"                                        Check \n"
+"                                    </b>"
+msgstr "<b style=\"font-family:Georgia, serif;\">\n"
+"                                        شيك \n"
+"                                    </b>"
+
+#. module: sale_custom
+#: model:ir.ui.view,arch_db:sale_custom.daily_sale_report_temp
+msgid "<b style=\"font-family:Georgia, serif;\">\n"
+"                                        Company\n"
+"                                    </b>"
+msgstr "<b style=\"font-family:Georgia, serif;\">\n"
+"                                        الشركة\n"
+"                                    </b>"
+
+#. module: sale_custom
+#: model:ir.ui.view,arch_db:sale_custom.paid_checks_report_temp
+msgid "<b style=\"font-family:Georgia, serif;\">\n"
+"                                        Company \n"
+"                                    </b>"
+msgstr "<b style=\"font-family:Georgia, serif;\">\n"
+"                                        الشركة \n"
+"                                    </b>"
+
+#. module: sale_custom
+#: model:ir.ui.view,arch_db:sale_custom.daily_sale_report_temp
+msgid "<b style=\"font-family:Georgia, serif;\">\n"
+"                                        Customer \n"
+"                                    </b>"
+msgstr "<b style=\"font-family:Georgia, serif;\">\n"
+"                                        الصيدلية \n"
+"                                    </b>"
+
+#. module: sale_custom
+#: model:ir.ui.view,arch_db:sale_custom.daily_sale_report_temp
+#: model:ir.ui.view,arch_db:sale_custom.non_paid_checks_report_temp
+#: model:ir.ui.view,arch_db:sale_custom.paid_checks_report_temp
+msgid "<b style=\"font-family:Georgia, serif;\">\n"
+"                                        Date\n"
+"                                    </b>"
+msgstr "<b style=\"font-family:Georgia, serif;\">\n"
+"                                        التاريخ\n"
+"                                    </b>"
+
+#. module: sale_custom
+#: model:ir.ui.view,arch_db:sale_custom.sale_man_invoices_report_temp
+msgid "<b style=\"font-family:Georgia, serif;\">\n"
+"                                        Date \n"
+"                                    </b>"
+msgstr "<b style=\"font-family:Georgia, serif;\">\n"
+"                                        التاريخ \n"
+"                                    </b>"
+
+#. module: sale_custom
+#: model:ir.ui.view,arch_db:sale_custom.daily_sale_report_temp
+msgid "<b style=\"font-family:Georgia, serif;\">\n"
+"                                        Description\n"
+"                                    </b>"
+msgstr "<b style=\"font-family:Georgia, serif;\">\n"
+"                                        الوصف\n"
+"                                    </b>"
+
+#. module: sale_custom
+#: model:ir.ui.view,arch_db:sale_custom.non_paid_checks_report_temp
+#: model:ir.ui.view,arch_db:sale_custom.paid_checks_report_temp
+#: model:ir.ui.view,arch_db:sale_custom.sale_man_invoices_report_temp
+msgid "<b style=\"font-family:Georgia, serif;\">\n"
+"                                        Invoice\n"
+"                                    </b>"
+msgstr "<b style=\"font-family:Georgia, serif;\">\n"
+"                                        الفاتورة\n"
+"                                    </b>"
+
+#. module: sale_custom
+#: model:ir.ui.view,arch_db:sale_custom.daily_sale_report_temp
+msgid "<b style=\"font-family:Georgia, serif;\">\n"
+"                                        Invoice \n"
+"                                    </b>"
+msgstr "<b style=\"font-family:Georgia, serif;\">\n"
+"                                        الفاتورة \n"
+"                                    </b>"
+
+#. module: sale_custom
+#: model:ir.ui.view,arch_db:sale_custom.daily_sale_report_temp
+#: model:ir.ui.view,arch_db:sale_custom.non_paid_checks_report_temp
+msgid "<b style=\"font-family:Georgia, serif;\">\n"
+"                                        Location \n"
+"                                    </b>"
+msgstr "<b style=\"font-family:Georgia, serif;\">\n"
+"                                        الموقع \n"
+"                                    </b>"
+
+#. module: sale_custom
+#: model:ir.ui.view,arch_db:sale_custom.daily_sale_report_temp
+msgid "<b style=\"font-family:Georgia, serif;\">\n"
+"                                        Lot Number \n"
+"                                    </b>"
+msgstr "<b style=\"font-family:Georgia, serif;\">\n"
+"                                        رقم الباتش\n"
+"                                    </b>"
+
+
+#. module: sale_custom
+#: model:ir.ui.view,arch_db:sale_custom.non_paid_checks_report_temp
+msgid "<b style=\"font-family:Georgia, serif;\">\n"
+"                                        Pharmacy \n"
+"                                    </b>"
+msgstr "<b style=\"font-family:Georgia, serif;\">\n"
+"                                        الصيدلية \n"
+"                                    </b>"
+
+#. module: sale_custom
+#: model:ir.ui.view,arch_db:sale_custom.daily_sale_report_temp
+msgid "<b style=\"font-family:Georgia, serif;\">\n"
+"                                        Quantity \n"
+"                                    </b>"
+msgstr "<b style=\"font-family:Georgia, serif;\">\n"
+"                                        الكمية \n"
+"                                    </b>"
+
+#. module: sale_custom
+#: model:ir.ui.view,arch_db:sale_custom.daily_sale_report_temp
+msgid "<b style=\"font-family:Georgia, serif;\">\n"
+"                                        Sales Man \n"
+"                                    </b>"
+msgstr "<b style=\"font-family:Georgia, serif;\">\n"
+"                                        مندوب المبيعات \n"
+"                                    </b>"
+
+#. module: sale_custom
+#: model:ir.ui.view,arch_db:sale_custom.paid_checks_report_temp
+msgid "<b style=\"font-family:Georgia, serif;\">\n"
+"                                        Serial\n"
+"                                    </b>"
+msgstr "<b style=\"font-family:Georgia, serif;\">\n"
+"                                        التسلسل\n"
+"                                    </b>"
+
+#. module: sale_custom
+#: model:ir.ui.view,arch_db:sale_custom.non_paid_checks_report_temp
+#: model:ir.ui.view,arch_db:sale_custom.paid_checks_report_temp
+msgid "<b style=\"font-family:Georgia, serif;\">\n"
+"                                        State \n"
+"                                    </b>"
+msgstr "<b style=\"font-family:Georgia, serif;\">\n"
+"                                        الحالة \n"
+"                                    </b>"
+
+#. module: sale_custom
+#: model:ir.ui.view,arch_db:sale_custom.non_paid_checks_report_temp
+#: model:ir.ui.view,arch_db:sale_custom.paid_checks_report_temp
+msgid "<b style=\"font-family:Georgia, serif;\">\n"
+"                                        Voucher \n"
+"                                    </b>"
+msgstr "<b style=\"font-family:Georgia, serif;\">\n"
+"                                        القيد \n"
+"                                    </b>"
+
+#. module: sale_custom
+#: model:ir.ui.view,arch_db:sale_custom.daily_cash_report_temp
+msgid "<b style=\"font-size:24px;\">\n"
+"                                        Invoices Report\n"
+"                                    </b>"
+msgstr "<b style=\"font-size:24px;\">\n"
+"                                        تقرير الفواتير\n"
+"                                    </b>"
+
+#. module: sale_custom
+#: model:ir.ui.view,arch_db:sale_custom.daily_sale_report_temp
+msgid "<b style=\"font-size:24px;font-family:Georgia, serif;\">\n"
+"                                    Daily Sale Report\n"
+"                                </b>"
+msgstr "<b style=\"font-size:24px;font-family:Georgia, serif;\">\n"
+"                                    تقرير البيع اليومي\n"
+"                                </b>"
+
+#. module: sale_custom
+#: model:ir.ui.view,arch_db:sale_custom.non_paid_checks_report_temp
+msgid "<b style=\"font-size:24px;font-family:Georgia, serif;\">\n"
+"                                    Non Paid Checks Report\n"
+"                                </b>"
+msgstr "<b style=\"font-size:24px;font-family:Georgia, serif;\">\n"
+"                                    الشيكات غير المتحصلة\n"
+"                                </b>"
+
+#. module: sale_custom
+#: model:ir.ui.view,arch_db:sale_custom.paid_checks_report_temp
+msgid "<b style=\"font-size:24px;font-family:Georgia, serif;\">\n"
+"                                    Paid Checks Report\n"
+"                                </b>"
+msgstr "<b style=\"font-size:24px;font-family:Georgia, serif;\">\n"
+"                                    تقرير الشيكات المتحصلة\n"
+"                                </b>"
+
+#. module: sale_custom
+#: model:ir.ui.view,arch_db:sale_custom.view_sales_loactions_form
+msgid "<b>\n"
+"                                            Name\n"
+"                                        </b>"
+msgstr "<b>\n"
+"                                            الاسم\n"
+"                                        </b>"
+
+#. module: sale_custom
+#: model:ir.ui.view,arch_db:sale_custom.view_sales_loactions_form
+msgid "<b>\n"
+"                                            Percentage\n"
+"                                        </b>"
+msgstr "<b>\n"
+"                                            النسبة\n"
+"                                        </b>"
+
+#. module: sale_custom
+#: selection:sales.man.payroll,calculate_method:0
+msgid "All"
+msgstr "الكل"
+
+#. module: sale_custom
+#: selection:sales.man.payroll,calculate_method:0
+msgid "All To Date"
+msgstr "الكل إلى تاريخ"
+
+#. module: sale_custom
+#: model:ir.model.fields,field_description:sale_custom.field_sales_men_payroll_archive_amount
+msgid "Amount"
+msgstr "المبلغ"
+
+#. module: sale_custom
+#: model:ir.ui.view,arch_db:sale_custom.view_daily_sale_wiz_form
+#: model:ir.ui.view,arch_db:sale_custom.view_sales_man_payroll_form
+msgid "Calculate"
+msgstr "حساب"
+
+#. module: sale_custom
+#: model:ir.model.fields,field_description:sale_custom.field_sales_man_payroll_calculate_method
+msgid "Calculate Method"
+msgstr "طريقة الحساب"
+
+#. module: sale_custom
+#: model:ir.ui.view,arch_db:sale_custom.view_checks_report_wiz_form
+#: model:ir.ui.view,arch_db:sale_custom.view_daily_sale_wiz_form
+#: model:ir.ui.view,arch_db:sale_custom.view_sales_man_payroll_form
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: sale_custom
+#: selection:sale.order,payment_type:0
+msgid "Cash"
+msgstr "نقداً"
+
+#. module: sale_custom
+#: model:ir.model.fields,field_description:sale_custom.field_account_invoice_cash_amount
+msgid "Cash Amount"
+msgstr "الميلغ بالنقد"
+
+#. module: sale_custom
+#: model:ir.model.fields,field_description:sale_custom.field_account_invoice_check_amount
+msgid "Check Amount"
+msgstr "المبلغ بالشيك"
+
+#. module: sale_custom
+#: model:ir.model.fields,field_description:sale_custom.field_account_invoice_check_number
+msgid "Check Number"
+msgstr "رقم الشيك"
+
+#. module: sale_custom
+#: model:ir.actions.act_window,name:sale_custom.action_checks_report_wiz_view
+#: model:ir.ui.menu,name:sale_custom.checks_report_wiz_menu
+msgid "Checks Report"
+msgstr "تقرير الشيكات"
+
+#. module: sale_custom
+#: model:ir.model.fields,field_description:sale_custom.field_sales_men_payroll_archive_customer_id
+msgid "Customer"
+msgstr "الصيدلية"
+
+#. module: sale_custom
+#: model:ir.model.fields,field_description:sale_custom.field_sale_order_line_custom_sale_price
+msgid "Customer Price"
+msgstr "سعر البيع"
+
+#. module: sale_custom
+#: selection:daily.sale.wiz,report_type:0
+msgid "Daily Cash"
+msgstr "النقد اليومي"
+
+#. module: sale_custom
+#: model:ir.actions.report,name:sale_custom.daily_cash_report_action
+msgid "Daily Cash Report"
+msgstr "تقرير النقد اليومي"
+
+#. module: sale_custom
+#: model:ir.ui.view,arch_db:sale_custom.daily_cash_report_temp
+msgid "Daily Cash Report For"
+msgstr "تقرير النقد اليومي ل"
+
+#. module: sale_custom
+#: model:ir.actions.act_window,name:sale_custom.action_daily_sale_wiz_view
+#: model:ir.ui.view,arch_db:sale_custom.view_checks_report_wiz_form
+#: model:ir.ui.view,arch_db:sale_custom.view_daily_sale_wiz_form
+msgid "Daily Sale"
+msgstr "البيع اليومي"
+
+#. module: sale_custom
+#: model:ir.actions.report,name:sale_custom.daily_sale_report_action
+#: model:ir.ui.menu,name:sale_custom.daily_sale_wiz_menu
+msgid "Daily Sale Report"
+msgstr "نقرير البيع اليومي"
+
+#. module: sale_custom
+#: selection:daily.sale.wiz,report_type:0
+msgid "Daily Sales"
+msgstr "البيع اليومي"
+
+#. module: sale_custom
+#: model:ir.model.fields,field_description:sale_custom.field_daily_sale_wiz_date
+#: model:ir.model.fields,field_description:sale_custom.field_sales_men_payroll_archive_date
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: sale_custom
+#: model:ir.ui.view,arch_db:sale_custom.sale_order_inherited_form
+msgid "Delivered Quantity"
+msgstr "الكمية المسلّمة"
+
+#. module: sale_custom
+#: model:ir.model.fields,field_description:sale_custom.field_sales_loactions_description
+#: model:ir.ui.view,arch_db:sale_custom.view_sales_loactions_form
+msgid "Description"
+msgstr "الوصف"
+
+#. module: sale_custom
+#: model:ir.model.fields,field_description:sale_custom.field_checks_report_wiz_display_name
+#: model:ir.model.fields,field_description:sale_custom.field_daily_sale_wiz_display_name
+#: model:ir.model.fields,field_description:sale_custom.field_report_sale_custom_daily_cash_report_temp_display_name
+#: model:ir.model.fields,field_description:sale_custom.field_report_sale_custom_daily_sale_report_temp_display_name
+#: model:ir.model.fields,field_description:sale_custom.field_report_sale_custom_non_paid_checks_report_temp_display_name
+#: model:ir.model.fields,field_description:sale_custom.field_report_sale_custom_paid_checks_report_temp_display_name
+#: model:ir.model.fields,field_description:sale_custom.field_report_sale_custom_sale_man_invoices_report_temp_display_name
+#: model:ir.model.fields,field_description:sale_custom.field_sales_loactions_display_name
+#: model:ir.model.fields,field_description:sale_custom.field_sales_man_payroll_display_name
+#: model:ir.model.fields,field_description:sale_custom.field_sales_men_payroll_archive_display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: sale_custom
+#: model:ir.model.fields,field_description:sale_custom.field_res_partner_duration_date
+#: model:ir.model.fields,field_description:sale_custom.field_res_users_duration_date
+msgid "Duration Date (days)"
+msgstr "فترة السماحية للعميل"
+
+#. module: sale_custom
+#: model:ir.model.fields,field_description:sale_custom.field_sales_man_payroll_end_date
+msgid "End Date"
+msgstr "تاريخ الإنتهاء"
+
+#. module: sale_custom
+#: selection:daily.sale.wiz,report_type:0
+msgid "Invoices"
+msgstr "الفواتير"
+
+#. module: sale_custom
+#: model:ir.ui.view,arch_db:sale_custom.view_sales_loactions_form
+msgid "Loaction"
+msgstr "المنطقة"
+
+#. module: sale_custom
+#: model:ir.ui.view,arch_db:sale_custom.view_sales_loactions_tree
+msgid "Loactions"
+msgstr "المناطق"
+
+#. module: sale_custom
+#: model:ir.actions.act_window,name:sale_custom.action_sales_loactions_view
+#: model:ir.ui.menu,name:sale_custom.locations_configration_menu
+msgid "Locations"
+msgstr "المناطق"
+
+#. module: sale_custom
+#: model:ir.model.fields,field_description:sale_custom.field_sales_loactions_name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: sale_custom
+#: selection:checks.report.wiz,report_type:0
+msgid "Non Paid"
+msgstr "غير متحصل"
+
+#. module: sale_custom
+#: model:ir.actions.report,name:sale_custom.non_paid_checks_report_action
+msgid "Non Paid Checks Report"
+msgstr "تقرير الشيكات غير المتحصلة"
+
+#. module: sale_custom
+#: selection:checks.report.wiz,report_type:0
+msgid "Paid"
+msgstr "متحصل"
+
+#. module: sale_custom
+#: model:ir.actions.report,name:sale_custom.paid_checks_report_action
+msgid "Paid Checks Report"
+msgstr "تقرير الشيكات المتحصلة"
+
+#. module: sale_custom
+#: model:ir.model.fields,field_description:sale_custom.field_account_invoice_payment_checked
+#: model:ir.model.fields,field_description:sale_custom.field_account_payment_payment_checked
+msgid "Payment Checked"
+msgstr "الدفعية تمت"
+
+#. module: sale_custom
+#: selection:sales.man.payroll,calculate_method:0
+msgid "Range"
+msgstr "فترة زمنية"
+
+#. module: sale_custom
+#: model:ir.model,name:sale_custom.model_sales_loactions
+msgid "Requirments of sales loactions"
+msgstr "متطلبات منطقة البيع"
+
+#. module: sale_custom
+#: model:ir.model.fields,field_description:sale_custom.field_account_invoice_sales_man_id
+#: model:ir.model.fields,field_description:sale_custom.field_account_payment_sales_man_id
+#: model:ir.model.fields,field_description:sale_custom.field_daily_sale_wiz_sales_man_id
+#: model:ir.model.fields,field_description:sale_custom.field_sale_order_sales_man_id
+#: model:ir.model.fields,field_description:sale_custom.field_sales_man_payroll_sales_man_id
+#: model:ir.model.fields,field_description:sale_custom.field_sales_men_payroll_archive_sales_man_id
+msgid "Sales Man"
+msgstr "مندوب المبيعات"
+
+#. module: sale_custom
+#: selection:daily.sale.wiz,report_type:0
+msgid "Sales Man Invoices"
+msgstr "فواتير مندوب مبيعات"
+
+#. module: sale_custom
+#: model:ir.actions.report,name:sale_custom.sale_man_invoices_report_action
+msgid "Sales Man Invoices Report"
+msgstr "تقرير فواتير مندوب مبيعات"
+
+#. module: sale_custom
+#: model:ir.actions.act_window,name:sale_custom.action_sales_man_payroll_view
+#: model:ir.ui.menu,name:sale_custom.sales_man_payroll_menu
+#: model:ir.ui.view,arch_db:sale_custom.view_sales_man_payroll_form
+msgid "Sales Man Payroll"
+msgstr "راتب مندوبي المبيعات"
+
+#. module: sale_custom
+#: model:ir.actions.act_window,name:sale_custom.action_sales_men_payroll_archive_view
+#: model:ir.ui.menu,name:sale_custom.menu_sales_men_payroll_archive
+#: model:ir.ui.view,arch_db:sale_custom.view_sales_men_payroll_archive_form
+#: model:ir.ui.view,arch_db:sale_custom.view_sales_men_payroll_archive_tree
+msgid "Sales Men Payroll Archive"
+msgstr "أرشيف راتب مندوبي المبيعات"
+
+#. module: sale_custom
+#: model:ir.ui.view,arch_db:sale_custom.report_saleorder_document_inh
+msgid "Signiture\n"
+"                    <br/>\n"
+"                    ..............."
+msgstr "التوقيع\n"
+"                    <br/>\n"
+"                    ..............."
+
+
+#. module: sale_custom
+#: model:ir.model.fields,field_description:sale_custom.field_sale_order_receipt_date
+#: model:ir.model.fields,field_description:sale_custom.field_sales_man_payroll_start_date
+msgid "Start Date"
+msgstr "تاريخ البدء"
+

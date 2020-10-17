@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+  <data>
+ 
+
+<record id="sale_order_inherited_form" model="ir.ui.view">
+      <field name="name">sale.order.form.inherited</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+           <xpath expr="//header" position="replace">
+
+
+        
+
+<header>
+                    <button name="action_quotation_send" string="Send by Email" type="object" states="draft" class="btn-primary"/>
+                    <button name="action_quotation_send" type="object" string="Send PRO-FORMA Invoice" groups="sale.group_proforma_sales" class="btn-primary" attrs="{'invisible': ['|', ('state', '!=', 'draft'), ('invoice_count','&gt;=',1)]}" context="{'proforma': True}"/>
+                    <button name="print_quotation" string="Print" type="object" states="draft,confirm_stock" class="btn-primary o_sale_print"/>
+
+                    <button name="action_confirm" id="action_confirm"
+                        string="Confirm Sale" class="btn-primary" type="object"
+                        attrs="{'invisible': [('state', 'not in', ['sent'])]}"/>
+                    <button name="action_confirm"
+                        string="Confirm Sale" type="object"
+                        attrs="{'invisible': [('state', 'not in', ['draft'])]}"/>
+
+                        <button name="action_confirm_custom" id="action_confirm_custom"
+                        string="Confirm Sale Picking" class="btn-primary" type="object"
+                        attrs="{'invisible': [('state', 'not in', ['sale'])]}"/>
+
+              
+
+                    <button name="action_quotation_send" type="object" string="Send PRO-FORMA Invoice" groups="sale.group_proforma_sales" attrs="{'invisible': ['|', ('state', '=', 'draft'), ('invoice_count','&gt;=',1)]}" context="{'proforma': True}"/>
+                    <button name="print_quotation" string="Print" type="object" states="sent,sale,confirm_stock" class="o_sale_print"/>
+                    <button name="action_quotation_send" string="Send by Email" type="object" states="sent,sale"/>
+                    <button name="action_cancel" states="draft,sent,sale,confirm_stock" type="object" string="Cancel"/>
+                    <button name="action_draft" states="cancel" type="object" string="Set to Quotation"/>
+                    <button name="action_done" type="object" string="Lock" states="sale"
+                        help="If the sale is locked, you can not modify it anymore. However, you will still be able to invoice or deliver."/>
+                    <button name="action_unlock" type="object" string="Unlock" states="done" groups="sales_team.group_sale_manager"/>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,sent,sale,sale picking"/>
+                </header>
+              </xpath>
+
+
+              </field>
+            </record>
+
+
+    <record id="sale_management.sale_order_view_form" model="ir.ui.view">
+        <field name="name">sale.order.form</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='sale_pay']/field[@name='invoice_status']" position="attributes">
+                <attribute name="invisible" eval="False"/>
+            </xpath>
+            <xpath expr="//button[@name='action_quotation_send']" position="before">
+                <button name="%(sale.action_view_sale_advance_payment_inv)d" string="Create Invoice"
+                    type="action" class="btn-primary"
+                    attrs="{'invisible': [('invoice_status', '!=', 'to invoice')]}"/>
+                <button name="%(sale.action_view_sale_advance_payment_inv)d" string="Create Invoice"
+                    type="action" context="{'default_advance_payment_method': 'percentage'}"
+                    attrs="{'invisible': ['|',('invoice_status', '!=', 'no'), ('state', 'not in', ('sale','confirm_stock'))]}"/>
+            </xpath>
+        </field>
+    </record>
+
+
+
+
+
+<!-- 
+    <record id="sale_order_inherited_form" model="ir.ui.view">
+      <field name="name">sale.order.form.inherited</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+
+        
+
+          <xpath expr="//button[@name='action_confirm']" position="after">
+
+            <button name="action_confirm_custom" id="action_confirm_custom"
+                        string="Confirm Sale Picking" class="btn-primary" type="object"
+                        attrs="{'invisible': [('state', 'not in', ['draft','sale'])]}"/>
+
+              
+          </xpath>
+
+           <xpath expr="//field[@name='state']" position='attributes'>
+            <attribute name='statusbar_visible'>draft,sent,sale,Sale Picking</attribute>
+          </xpath>
+
+
+
+ 
+
+
+      </field>
+    </record> -->
+
+   <!--  <record id="view_order_tree_inh" model="ir.ui.view">
+      <field name="name">sale.order.tree</field>
+      <field name="model">sale.order</field>
+      <field name="inherit_id" ref="sale.view_order_tree" />
+      <field name="arch" type="xml">
+        <xpath expr="//tree" position="attributes">
+            <attribute name="decoration-danger">state=='draft'</attribute>
+            <attribute name="decoration-info">state=='sale'</attribute>                  
+        </xpath>
+
+
+      </field>
+    </record>
+ -->
+
+    <record id="sale.view_order_tree" model="ir.ui.view">
+            <field name="name">sale.order.tree</field>
+            <field name="model">sale.order</field>
+            <field name="priority">2</field>
+            <field name="arch" type="xml">
+                <tree string="Sales Orders" decoration-bf="message_needaction==True"  decoration-info="state=='sale'" decoration-danger="state=='draft'" decoration-muted="state=='cancel'">
+                    <field name="message_needaction" invisible="1"/>
+                    <field name="name" string="Order Number"/>
+                    <field name="confirmation_date" string="Confirmation Date"/>
+                    <field name="partner_id"/>
+                    <field name="user_id"/>
+                    <field name="amount_total" sum="Total Tax Included" widget="monetary"/>
+                    <field name="currency_id" invisible="1"/>
+                    <field name="invoice_status" invisible="1"/>
+                    <field name="state" invisible="1"/>
+                </tree>
+            </field>
+        </record>
+
+
+
+
+
+  </data>
+</odoo>

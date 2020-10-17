@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record model="mail.channel" id="channel_check_log">
+        <field name="name">check log managers</field>
+        <field name="group_ids" eval="[(4, ref('account_check_printing_custom.group_check_print_manager'))]"/>
+        <field name="description">General announcements for all check log managers.</field>
+    </record>
+
+    <record id="email_template_data_check_validity" model="mail.template">
+        <field name="name">Check Validity Warning</field>
+        <field name="subject">Check Validity Warning </field>
+        <field name="model_id" ref="account_check_printing_custom.model_check_log"/>
+        <field name="body_html"><![CDATA[
+<p>Dear check log managers,</p>
+<p>the partner's <strong> ${object.partner_id.name} </strong> check of   <strong> ${object.date_due} </strong> will be
+not valid soon 
+.</p>]]></field>
+    </record>
+
+
+    <record id="notify_user_job" model="ir.cron">
+        <field name="name">notify user when a check have a week before validity end</field>
+        <field name="model_id" ref="account_check_printing_custom.model_check_log"/>
+        <field name="state">code</field>
+        <field name="code">model.notify_user()</field>
+        <field name='interval_number'>1</field>
+        <field name='interval_type'>days</field>
+        <field name="numbercall">-1</field>
+    </record>
+</odoo>

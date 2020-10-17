@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="check_print_category" model="ir.module.category">
+            <field name="name">Check Print</field>
+        </record>
+
+        <record id="group_check_print_manager" model="res.groups">
+            <field name="name">Check Print Manager</field>
+            <field name="category_id" ref="check_print_category"/>
+        </record>
+    </data>
+</odoo>

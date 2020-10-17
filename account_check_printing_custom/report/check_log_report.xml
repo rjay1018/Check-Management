@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+
+  <!-- """ tefine report template """ -->
+
+    <template id="check_log_template">
+      <t t-call="web.html_container">
+        <t t-foreach="docs" t-as="o">
+          <t t-call="web.external_layout">
+            <div class="page">  
+              <center>
+                <b style="font-size:24px;padding-top:8px;padding-bottom:8px;padding-left:40px; padding-right:40px;margin-left:50px;">
+                  إذن صرف شيك
+                </b>
+              </center>
+              <br></br><br></br><br></br><br></br>
+
+              <div style="text-align:right; font-size:20px;">
+                <n style="font-size:20px;">
+                  من / ح 
+                  <span t-field="o.journal_id.name"/>
+                  مبلغ <span t-field="o.amount"/>
+                </n>
+              </div>
+              <br></br>
+
+              <div style="text-align:right; font-size:20px;">
+                <n>
+                  المستفيد : 
+                  <span t-field="o.partner_id.name"/>
+                  <br></br>
+                  وذلك عبارة عن 
+                  <span t-field="o.name"/>
+                </n>
+              </div>
+
+              <div style="width:100%;text-align:right; font-size:20px;margin-top:150px;">
+
+                <div style="float:right; width:42%;text-align:right;">
+                  <b style="font-size:24px;text-align:right;font-family:Georgia, serif;">أستخرج بواسطة : </b>
+                  <br></br>
+                  <n style="font-size:24px;text-align:right;font-family:Georgia, serif;"> 
+                    <span t-esc="user.name"></span> 
+                    الاسم
+                    <br></br>
+                    التوقيع ....................................   
+                    <br></br>
+                    الشيك رقم <span t-field="o.check_no"/>
+                    <br></br>
+                    مسحوب على بنك ............................
+                  </n>
+                </div>
+
+                <div style="float:left; width:42%;text-align:right;">
+                  <b style="font-size:24px;text-align:right;font-family:Georgia, serif;">وأعتمد بواسطة : </b>
+                  <br></br>
+                  <n style="font-size:24px;text-align:right;font-family:Georgia, serif;">
+                    الاسم ..................................... 
+                    <br></br>
+                    التوقيع .................................... 
+                    <br></br>
+                    بتاريخ .............................
+                  </n>
+                </div>
+
+              </div>
+              <br></br><br></br>
+
+              <div style="width:100%;text-align:right; font-size:20px;margin-top:150px;">
+                <div style="float:right; width:42%;text-align:right;">
+                  <n style="font-size:24px;text-align:right;font-family:Georgia, serif;"> 
+                    اسم المستلم ...............................
+                    <br></br>
+                    التاريخ : 
+                    <span t-esc="o.date_due"/> 
+                  </n>
+                </div>
+                <div style="float:left; width:42%;text-align:right;">
+                  <n style="font-size:24px;text-align:right;font-family:Georgia, serif;">
+                    التوقيع .................................... 
+                  </n>
+                </div>
+              </div>
+
+            </div>
+          </t>
+        </t>
+      </t>
+    </template>
+
+    <!-- """the end of the report template""" -->
+
+    <!-- """create report """ -->
+
+    <report
+        id="check_log_report_action"
+        string="Check Log Report"
+        model="check.log"
+        report_type="qweb-pdf"
+        name="account_check_printing_custom.check_log_template"
+        menu="True"
+    />
+     <record id="paperformat_euro_no_margin" model="report.paperformat">
+        <field name="name">European A4</field>
+        <field name="default" eval="True" />
+        <field name="format">A4</field>
+        <field name="page_height">0</field>
+        <field name="page_width">0</field>
+        <field name="orientation">Portrait</field>
+        <field name="margin_top">40</field>
+        <field name="margin_bottom">28</field>
+        <field name="margin_left">7</field>
+        <field name="margin_right">7</field>
+        <field name="header_line" eval="False" />
+        <field name="header_spacing">0</field>
+        <field name="dpi">90</field>
+    </record>
+
+  </data>
+</odoo>

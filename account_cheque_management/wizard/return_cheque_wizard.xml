@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <data>
+
+        <record id="return_cheque_wizard_form" model="ir.ui.view">
+            <field name="name">return.cheque.wizard.form</field>
+            <field name="model">return.cheque.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Return Cheque">
+                    <group>
+                        <field name="cheque_id" readonly="1"/>
+                        <field name="datetime" required="1"/>
+                        <field name="reason" required="1"/>
+                    </group>
+                    <footer>
+                        <button string='RETURN' name="action_cheque_return" type="object" class="btn btn-danger"/>
+                        <button string="Cancel" class="oe_link" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="return_cheque_wizard_action" model="ir.actions.act_window">
+            <field name="name">Return Cheque Wizard</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">return.cheque.wizard</field>
+            <field name="view_id" ref="return_cheque_wizard_form"/>
+            <field name="target">new</field>
+        </record>
+
+    </data>
+</odoo>

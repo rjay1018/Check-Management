@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <data>
+
+        <!-- Inherit Form View to Modify it -->
+        <record id="account_cheque_inherit_journal_view" model="ir.ui.view">
+            <field name="name">account.cheque.inherit.journal.view</field>
+            <field name="model">account.journal</field>
+            <field name="inherit_id" ref="account.view_account_journal_form"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//notebook" position="inside">
+
+                    <page string="Account Cheques">
+                        <br/>
+                        <div class="oe_title">
+                            <h1>
+                                <field name="cheque_number" string="Cheque Number" nolabel="1"/>
+                                <br/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group string="Customer Cheque" attrs="{'invisible': [('is_customer_cheque', '!=', True)]}">
+                                <field name="is_customer_cheque" invisible="1"/>
+                                <field name="under_collection_account_id" attrs="{'required': [('is_customer_cheque', '=', True)]}"/>
+                                <field name="customer_return_account_id" attrs="{'required': [('is_customer_cheque', '=', True)]}"/>
+                            </group>
+                            <group string="Vendor Cheque" attrs="{'invisible': [('is_vendor_cheque', '!=', True)]}">
+                                <field name="is_vendor_cheque" invisible="1"/>
+                                <field name="outstanding_account_id" attrs="{'required': [('is_vendor_cheque', '=', True)]}"/>
+                                <field name="vendor_return_account_id" attrs="{'required': [('is_vendor_cheque', '=', True)]}"/>
+                            </group>
+                        </group>
+                    </page>
+
+                </xpath>
+
+            </field>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <data>
+
+        <record id="account_cheque_form_view" model="ir.ui.view">
+            <field name="name">account.cheque.form.view</field>
+            <field name="model">account.cheque</field>
+            <field name="arch" type="xml">
+                <form create="false" delete="false" import="false" edit="false" string="Account Cheque">
+                    <header>
+                        <button name="action_cheque_in_bank"
+                                type="object"
+                                string="Deposit In Bank"
+                                class="oe_highlight"
+                                attrs="{'invisible': [('state', 'not in', ['under_collection'])]}"/>
+                        <button name="action_open_return_wizard"
+                                type="object"
+                                string="Return Cheque"
+                                class="oe_highlight"
+                                attrs="{'invisible': [('state', 'not in', ['in_bank'])]}"/>
+
+                        <button name="action_cheque_in_drawable"
+                                type="object"
+                                string="In Drawable"
+                                class="oe_highlight"
+                                attrs="{'invisible': [('state', 'not in', ['out_standing'])]}"/>
+                        <button name="action_open_return_wizard"
+                                type="object"
+                                string="Return Cheque"
+                                class="oe_highlight"
+                                attrs="{'invisible': [('state', 'not in', ['in_drawable'])]}"/>
+
+                        <field name="state" widget="statusbar" statusbar_visible="new,under_collection,in_bank,done"/>
+                    </header>
+                    <sheet>
+
+                        <div class="oe_title">
+                            <h1>
+                                <field name="name" nolabel="1"/>
+                                <br/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="holder_id"/>
+                                <field name="date"/>
+                                <field name="amount"/>
+                                <field name="payment_id"/>
+                                <field name="cheque_number"/>
+                                <field name="cheque_type"/>
+                            </group>
+                            <group>
+                                <field name="beneficiary_id"/>
+                                <field name="journal_id"/>
+                                <field name="company_id"/>
+                                <field name="bank_id"/>
+                                <field name="currency_id"/>
+                                <field name="memo"/>
+                                <field name="return_reason" attrs="{'invisible': [('return_reason', '=', False)]}" style="color:red; font-weight:bold"/>
+                            </group>
+                        </group>
+
+                        <notebook>
+                            <page string="Cheque Lines">
+                                <field name="cheque_line_ids" nolabel="1">
+                                    <tree>
+                                        <field name="move_id"/>
+                                        <field name="note"/>
+                                        <field name="datetime"/>
+                                    </tree>
+
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="account_cheque_tree_view" model="ir.ui.view">
+            <field name="name">account.cheque.tree.view</field>
+            <field name="model">account.cheque</field>
+            <field name="arch" type="xml">
+                <tree string="Account Cheque" create="false" delete="false" import="false" edit="false">
+                    <field name="name"/>
+                    <field name="beneficiary_id"/>
+                    <field name="holder_id"/>
+                    <field name="journal_id"/>
+                    <field name="amount"/>
+                    <field name="payment_id"/>
+                    <field name="cheque_number"/>
+                    <field name="date"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="account_cheque_customer_action" model="ir.actions.act_window">
+            <field name="name">Customer Cheque</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">account.cheque</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('cheque_type', '=', 'inbound')]</field>
+        </record>
+
+        <record id="account_cheque_vendor_action" model="ir.actions.act_window">
+            <field name="name">Vendor Cheque</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">account.cheque</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('cheque_type', '=', 'outbound')]</field>
+        </record>
+
+        <!-- This Menu Item will appear in the Upper bar, That's why It needs NO parent or action -->
+        <menuitem id="account_cheque_root_menu" name="Cheque Management" parent="account.menu_finance"/>
+
+        <!-- This Menu Item must have a parent and an action -->
+        <menuitem id="customer_cheque_menu" name="Customer Cheque" parent="account_cheque_management.account_cheque_root_menu" action="account_cheque_management.account_cheque_customer_action"/>
+
+        <!-- This Menu Item must have a parent and an action -->
+        <menuitem id="vendor_cheque_menu" name="Vendor Cheque" parent="account_cheque_management.account_cheque_root_menu" action="account_cheque_management.account_cheque_vendor_action"/>
+
+    </data>
+</odoo>

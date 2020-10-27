@@ -215,7 +215,7 @@ class AccountCheque(models.Model):
 
     @api.multi
     def check_cheque_date(self, cheque_date):
-        if cheque_date < datetime.now().date():
+        if cheque_date > str(datetime.now().date()):
             raise ValidationError(_("The check date has not yet come .! \n Check Date %s" % cheque_date))
 
     @api.multi
@@ -230,10 +230,23 @@ class AccountCheque(models.Model):
             action['context'] = ctx
             return action
 
+    @api.multi
+    def action_cheque_done(self):
+        for rec in self:
+            note = "Cheque Done by %s" % self.env.user.name
+            line_values = {
+                'cheque_id': self.id,
+                'datetime': datetime.now(),
+                'note': note,
+            }
+            self.env['account.cheque.line'].create(line_values)
+            rec.state = 'done'
+
 
 class AccountChequeLine(models.Model):
     _name = 'account.cheque.line'
     _description = 'Account Cheque Line'
+    _order = 'datetime'
 
     move_id = fields.Many2one('account.move', string="Account Move")
     datetime = fields.Datetime(string="Date")

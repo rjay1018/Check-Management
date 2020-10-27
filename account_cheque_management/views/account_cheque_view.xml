@@ -17,7 +17,7 @@
                         <button name="action_open_return_wizard"
                                 type="object"
                                 string="Return Cheque"
-                                class="oe_highlight"
+                                class="btn btn-danger"
                                 attrs="{'invisible': [('state', 'not in', ['in_bank'])]}"/>
 
                         <button name="action_cheque_in_drawable"
@@ -28,8 +28,14 @@
                         <button name="action_open_return_wizard"
                                 type="object"
                                 string="Return Cheque"
-                                class="oe_highlight"
+                                class="btn btn-danger"
                                 attrs="{'invisible': [('state', 'not in', ['in_drawable'])]}"/>
+
+                        <button name="action_cheque_done"
+                                type="object"
+                                string="Cheque Done"
+                                class="oe_highlight"
+                                attrs="{'invisible': [('state', 'not in', ['in_drawable', 'in_bank'])]}"/>
 
                         <field name="state" widget="statusbar" statusbar_visible="new,under_collection,in_bank,done"/>
                     </header>
@@ -63,6 +69,7 @@
 
                         <notebook>
                             <page string="Cheque Lines">
+                                <separator string="Cheque Lines"/>
                                 <field name="cheque_line_ids" nolabel="1">
                                     <tree>
                                         <field name="move_id"/>
